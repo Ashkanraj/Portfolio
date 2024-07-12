@@ -52,7 +52,7 @@ ul {
     --FS-M: 1.2rem;
     --FS-L: 1.6rem;
     --FS-XL: 2.2rem;
-    --FS-XXL: 2.8rem;
+    --FS-XXL: 3.2rem;
     --FF-MAIN: "Roboto", "sans-serif";
     --FS-ICON: 4rem;
     --PADDING: 1.2rem;
@@ -644,7 +644,7 @@ main {
     }
 
     .about-text-container {
-        width: 40%;
+        width: 50%;
     }
 
     .about-title {
@@ -659,11 +659,11 @@ main {
     }
 
     .about-intro {
-        width: 60%;
+        width: 50%;
     }
 
     .skills-container {
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: center;
         gap: var(--PADDING);
     }
@@ -716,5 +716,77 @@ main {
         display: flex;
         align-items: center;
         width: 60%;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        padding: 0 10%;
+    }
+
+    .hero-container {
+        min-height: 100vh;
+        padding: var(--PADDING) 10%;
+    }
+    .heroPic img {
+        width: min(500px, 90%);
+    }
+
+    .heroDesc {
+        font-size: var(--FS-M);
+    }
+
+    .heroText {
+        font-size: var(--FS-XXL);
+    }
+
+    .logo-section {
+        margin-top: 0;
+        padding: 0 10%;
+        justify-content: space-between;
+    }
+
+    .logo-section i {
+        width: 20%;
+        font-size: var(--FS-ICON);
+    }
+
+    .about-section {
+        padding-right: 10%;
+        justify-content: space-between;
+    }
+    
+    .skills-section {
+        padding: var(--PADDING) 10%;
+        justify-content: space-between;
+    }
+    
+    .skill-card {
+        width: clamp(200px, 25vw, 400px);
+    }
+
+    .project-section {
+        padding: 0 10%;
+    }
+
+    .projects-container {
+        gap: 1rem;
+    }
+
+    .project-card {
+        width: clamp(250px, 25vw, 450px);
+        height: 300px;
+    }
+
+    .contact-section {
+        padding: 0 10%;
+    }
+
+    .footer {
+        padding: 5rem 10% 2rem;
+    }
+
+    .footer-contact-logo i{
+        font-size: var(--FS-L);
     }
 }
