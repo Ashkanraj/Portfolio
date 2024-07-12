@@ -50,9 +50,9 @@ ul {
     --FC-BLUE: #0077ff;
     --FS-S: 1rem;
     --FS-M: 1.2rem;
-    --FS-L: 1.5rem;
+    --FS-L: 1.6rem;
     --FS-XL: 2.2rem;
-    --FS-XXL: 3rem;
+    --FS-XXL: 2.8rem;
     --FF-MAIN: "Roboto", "sans-serif";
     --FS-ICON: 4rem;
     --PADDING: 1.2rem;
@@ -155,7 +155,6 @@ body {
    top: 4rem;
    width: 100%;
    transform: translateY(-1000px);
-   transition: transform 0.5s ease-in-out;
    background-color: var(--BG-LIGHT);
    z-index: 1;
    border-bottom: 1px solid lightgray;
@@ -177,6 +176,8 @@ body {
     justify-content: center;
     align-items: center;
     transition: var(--TRANSITION);
+    color: rgba(0, 0, 0, 0.7);
+    letter-spacing: 1.5px;
 }
 
 .header__item a:hover, .header__item a:focus {
@@ -203,23 +204,23 @@ main {
 
 .heroPic img {
     min-width: 200px;
-    width: 75%;
+    width: 70%;
     height: auto;
     border-radius: 100%;
 }
 
 .heroDesc {
-    margin-top: var(--MARGIN);
+    text-align: center;
 }
 
 .heroText {
     margin-top: var(--MARGIN);
+    text-align: center;
 }
 
 .heroText h1 {
     font-size: var(--FS-XL);
     font-weight: bold;
-    text-align: center;
     line-height: 1.5;
 }
 
@@ -245,7 +246,7 @@ main {
 
 .logo-section i {
     display: block;
-    font-size: var(--FS-XXL);
+    font-size: var(--FS-XL);
     opacity: 0.5;
     padding: var(--PADDING);
 }
@@ -253,7 +254,7 @@ main {
 /* ---------------- About section styles --------------- */
 
 .about-section {
-    scroll-margin-block-start: var(--MARGIN);
+    scroll-margin-block-start: 5rem;
     margin-top: var(--MARGIN-L);
     display: flex;
     flex-direction: column;
@@ -273,6 +274,7 @@ main {
 }
 
 .about-title {
+    text-align: center;
     margin-top: var(--MARGIN);
     font-size: var(--FS-L);
     letter-spacing: 1.5px;
@@ -383,7 +385,7 @@ main {
 /* --------------- Projects section --------------- */
 
 .project-section {
-    scroll-margin-block-start: var(--MARGIN);
+    scroll-margin-block-start: 5rem;
     margin-top: var(--MARGIN-L);
     display: flex;
     flex-direction: column;
@@ -403,7 +405,7 @@ main {
     font-size: var(--FS-XL);
 }
 
-.project-container {
+.projects-container {
     margin-top: var(--MARGIN);
     display: flex;
     flex-direction: column;
@@ -419,7 +421,7 @@ main {
     height: 350px;
     margin-top: var(--MARGIN);
     background-image: url("./Images/project-temp.jpg");
-    filter: brightness(95%);
+    filter: brightness(90%);
     background-size: cover;
     border-radius: 15px;
     cursor: pointer;
@@ -434,7 +436,7 @@ main {
     border-radius: 15px;
     background-color: transparent;
     color: rgba(0, 0, 0, 0);
-    font-size: var(--FS-XXL);
+    font-size: var(--FS-XL);
     font-weight: bold;
     letter-spacing: 1.5px;
     transition: var(--TRANSITION);
@@ -448,6 +450,7 @@ main {
 /* **************** Contact-section ***************** */
 
 .contact-section {
+    scroll-margin-block-start: 4rem;
     margin-top: var(--MARGIN-L);
     background-color: var(--BG-BLUE);
     padding: 0 var(--PADDING);
@@ -512,7 +515,6 @@ main {
 /* ********************* Footer section ******************** */
 
 .footer {
-   
     background-color: var(--BG-BLUE);
     padding: 4rem var(--PADDING) 1rem;
     color: var(--FC-LIGHT);
@@ -520,6 +522,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.footer-logo {
+    text-align: center;
 }
 
 .footer-copyright {
@@ -538,4 +544,177 @@ main {
 
 .footer-contact-logo i:hover {
     filter: brightness(80%);
+}
+
+
+/* ***************** Responsive Media Queries **************** */
+
+@media screen and (min-width: 576px){
+    .heroPic img{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        background-color: var(--BG-LIGHT);
+        display: flex;
+        flex-flow: row nowrap;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 0.25rem 1rem lightgray;
+        z-index: 1;
+    }
+    .header__menu {
+        position: static;
+        box-shadow: none;
+        z-index: 0;
+        width: 40%;
+    }
+
+    .header__menu span {
+        display: none;
+    }
+
+    .header__nav {
+        position: static;
+        z-index: 0;
+        transform: translateY(0);
+        width: 60%;
+        transition: none;
+    }
+
+    .header__tmenu {
+        flex-flow: row nowrap;
+    }
+
+    .header__item {
+        width: 25%;
+    }
+
+    .hero-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: var(--PADDING);
+    }
+    .heroPic {
+        width: 40%;
+    }
+
+    .heroPic img {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 60%;
+    }
+
+    .heroText {
+        text-align: left;
+    }
+
+    .heroDesc {
+        text-align: left;
+    }
+
+    .btn-container {
+        flex-direction: row;
+        gap: var(--PADDING);
+    }
+
+    .logo-section {
+        width: 100%;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .logo-section i {
+        width: 25%;
+        text-align: center;
+        font-size: var(--FS-XXL);
+    }
+
+    .about-section {
+        flex-flow: row nowrap;
+        padding: 0 var(--PADDING);
+    }
+
+    .about-text-container {
+        width: 40%;
+    }
+
+    .about-title {
+        margin-top: 0;
+        text-align: left;
+        
+    }
+
+    .about-desc {
+        text-align: left;
+        padding: 0;
+    }
+
+    .about-intro {
+        width: 60%;
+    }
+
+    .skills-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--PADDING);
+    }
+
+    .projects-container {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .project-card {
+        width: clamp(250px, 40vw, 500px);
+    }
+
+    .contact-section {
+        flex-flow: row nowrap;
+        width: 100%;
+    }
+
+    .contact-text-container {
+        width: 60%;
+        text-align: left;
+    }
+
+    .contact-form {
+        width: 40%;
+    }
+
+    .footer {
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+
+    .footer-logo {
+        padding-right: var(--PADDING);
+    }
+
+    .footer-copyright {
+        margin: 0;
+    }
+
+    .footer-contact-logo {
+        margin: 0;
+        width: 40%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .footer-text-container {
+        display: flex;
+        align-items: center;
+        width: 60%;
+    }
 }

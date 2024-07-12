@@ -14,9 +14,11 @@ menuBar.addEventListener("click", function (){
 })
 
 function showMenu(){
+    navBar.style.transition = "transform 0.5s ease-in-out";
     navBar.style.transform = "translateY(0px)";
 }
 
 function hideMenu(){
+    navBar.style.transition = "transform 0.5s ease-in-out";
     navBar.style.transform = "translateY(-1000px)";
 }

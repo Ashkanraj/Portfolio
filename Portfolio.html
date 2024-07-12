@@ -25,7 +25,7 @@
     </section>
     <nav id="navbar" class="header__nav">
         <ul class="header__tmenu">
-            <li class="header__item"><a href="#Home">Home</a></li>
+            <li class="header__item"><a href="#main">Home</a></li>
             <li class="header__item"><a href="#About">About Me</a></li>
             <li class="header__item"><a href="#Projects">Projects</a></li>
             <li class="header__item"><a href="#Contact">Contact Me</a></li>
@@ -34,20 +34,22 @@
 </header>
 
 <main id="main">
-    <figure class="heroPic">
-        <img src="./Images/profile.jpg" width="640" height="640">
-        <figcaption class="heroDesc">
-            Welcome to my portfolio
-        </figcaption>
-    </figure>
-    <section class="heroText">
-        <h1 class="nowrap">Hi I'm</h1>
-        <h1 class="nowrap blueText">Ashkan Rahanjam</h1>
-        <h1>Front-End Developer</h1>
-    </section>
-    <section class="btn-container">
-        <button class="hero__btn btn-primary">Hire me!</button>
-        <button class="hero__btn btn-secondary">Projects</button>
+    <section class="hero-container">
+        <figure class="heroPic">
+            <img src="./Images/profile.jpg" width="640" height="640">
+        </figure>
+        <div class="text-container">
+            <section class="heroText">
+                <p class="heroDesc"> Welcome to my portfolio </p>
+                <h1 class="nowrap">Hi I'm</h1>
+                <h1 class="nowrap blueText">Ashkan Rahanjam</h1>
+                <h1>Front-End Developer</h1>
+            </section>
+            <section class="btn-container">
+                <button class="hero__btn btn-primary">Hire me!</button>
+                <button class="hero__btn btn-secondary">Projects</button>
+            </section>
+        </div>
     </section>
     
     <section class="logo-section">
@@ -60,19 +62,21 @@
     <section id="About" class="about-section">
         <figure class="about-intro">
              <img src="./Images/developer.svg" class="dev-img" width="500" height="500">
-            <figcaption class="about-title blueText">About Me</figcaption>
         </figure>
-        <p class="about-desc">
-            Hello there, I'm <span class="bold" >Ashkan Rahanjam</span> computer engineering student at Isfahan university.I sepecialize in web design and development.I'm passionate and committed to my work.  
-        </p>
-        <button class="btn-primary">Contact Me</button>
-        <div class="ability-section">
-            <p class="ability-title">Html - CSS - JavaScript</p>
-            <div class="ability-bar"><span class="active-bar ability1"></span></div>
-            <p class="ability-title">React - ES6</p>
-            <div class="ability-bar"><span class="active-bar ability2"></span></div>
-            <p class="ability-title">Bootstrap - Tailwind - Sass</p>
-            <div class="ability-bar"><span class="active-bar ability3"></span></div>
+        <div class="about-text-container">
+            <p class="about-title blueText">About Me</p>
+            <p class="about-desc">
+                Hello there, I'm <span class="bold" >Ashkan Rahanjam</span> computer engineering student at Isfahan university.I sepecialize in web design and development.I'm passionate and committed to my work.  
+            </p>
+            <button class="btn-primary">Contact Me</button>
+            <div class="ability-section">
+                <p class="ability-title">Html - CSS - JavaScript</p>
+                <div class="ability-bar"><span class="active-bar ability1"></span></div>
+                <p class="ability-title">React - ES6</p>
+                <div class="ability-bar"><span class="active-bar ability2"></span></div>
+                <p class="ability-title">Bootstrap - Tailwind - Sass</p>
+                <div class="ability-bar"><span class="active-bar ability3"></span></div>
+            </div>
         </div>
     </section>
     
@@ -94,12 +98,15 @@
             <p class="project-card"><span class="material-symbols-outlined">visibility</span></p>
             <p class="project-card"><span class="material-symbols-outlined">visibility</span></p>
             <p class="project-card"><span class="material-symbols-outlined">visibility</span></p>
+            <p class="project-card"><span class="material-symbols-outlined">visibility</span></p>
         </div>
     </section>
 
-    <section class="contact-section">
-        <h3 class="contact-section-title">Contact Me</h3>
-        <h1 class="contact-section-desc">Ask Me What you want</h1>
+    <section id="Contact" class="contact-section">
+        <div class="contact-text-container">
+            <h3 class="contact-section-title">Contact Me</h3>
+            <h1 class="contact-section-desc">Ask Me What you want</h1>
+        </div>
         <form action="#" class="contact-form">
             <input class="text-input" type="text" name="name" placeholder="name">
             <input class="text-input" type="email" name="email" placeholder="myEmail@email.com">
@@ -110,14 +117,16 @@
 </main>
 
 <footer class="footer">
-    <h1 class="footer-logo">
-        <a href="#main">
-            A
-            <i class="fa-solid fa-laptop"></i>
-            R
-        </a>
-    </h1>
-    <p class="footer-copyright">&#169 CopyRight 2024. All Rights Reserved</p>
+    <div class="footer-text-container">
+        <h1 class="footer-logo">
+            <a href="#main">
+                A
+                <i class="fa-solid fa-laptop"></i>
+                R
+            </a>
+        </h1>
+        <p class="footer-copyright">&#169 CopyRight 2024. All Rights Reserved</p>
+    </div>
     <section class="footer-contact-logo">
         <a href="#email"><i class="fa-solid fa-envelope"></i></a>
         <a href="#linkedin"><i class="fa-brands fa-linkedin"></i></a>
