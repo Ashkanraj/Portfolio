@@ -68,7 +68,7 @@ ul {
 }
 
 .blueText {
-    color: var(--FC-BLUE);
+    color: var(--FC-BLUE) !important;
 }
 
 .bold {
